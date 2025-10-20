@@ -491,8 +491,6 @@
 
         } */
 
-
-
         .letters {
             position: absolute;
             width: 65px;
@@ -515,6 +513,7 @@
             background: rgba(0, 0, 0, 0.7);
             display: none;
         }
+        
 
         .boxLetter {
             width: 100%;
@@ -604,15 +603,52 @@
 
        
         .textLetter {
-            width: 100%;
-            flex-direction: column;
-            justify-content: center;
-            display: flex;
-            align-items: center;
-            user-select: none;
-        }
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding: 0 30px;
+    user-select: none;
+    text-align: left; /* căn chữ sang trái */
+}
+
+/* Hộp quà bên trái */
+.giftBox {
+    flex: 1; /* chiếm 1/3 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.giftBox img {
+    width: 100%;
+    max-width: 180px;
+}
+
+/* Phần chữ bên phải */
+.contentSection {
+    flex: 2; /* chiếm 2/3 */
+    padding-left: 30px;
+    font-family: 'Dancing Script', cursive;
+    color: #333;
+}
+
+.contentSection h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    text-align: left;
+}
+
+.contentSection p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
 
         .textLetter h2 {
+            text-align: center;
             font-size: 30px;
             font-family: 'Dancing Script', cursive;
         }
@@ -626,7 +662,8 @@
             position: initial;
 
         }
-
+        
+        
         .fa-xmark {
             position: absolute;
             right: 20px;
@@ -973,21 +1010,30 @@
                 </div>
 
                 <div class="wrapperLetter">
-
                     <div class="textLetter">
+                  
+                      <!-- Hộp quà bên trái -->
+                      <div class="giftBox">
+                        <img src="./image/giftbox.png" alt="Hộp quà">
+                      </div>
+                  
+                      <!-- Chữ bên phải -->
+                      <div class="contentSection">
                         <h2></h2>
-                        <p class="contentLetter"></p>
-                        <div class="heartAnimation">
-                            <img src="./image/heartAnimation.gif" alt="">
-                        </div>
+                        <p class="contentLetter">
+                        </p>
+                      </div>
+                  
                     </div>
-                    <div class="mewmew1">
-                        <img src="./image/mewmew.gif" alt="">
+                  
+                    <!-- Hiệu ứng tim và mèo giữ nguyên -->
+                    <div class="heartAnimation">
+                      <img src="./image/heartAnimation.gif" alt="">
                     </div>
-                    <div class="mewmew2">
-                        <img src="./image/mewmew.gif" alt="">
-                    </div>
-                </div>
+                    <div class="mewmew1"><img src="./image/mewmew.gif" alt=""></div>
+                    <div class="mewmew2"><img src="./image/mewmew.gif" alt=""></div>
+                  </div>
+                  
             </div>
             <div class="before"></div>
         </div>
@@ -1109,7 +1155,7 @@
         // .textLetter text h2
         let indexText = 0;
         let textLetter = document.querySelector('.textLetter h2');
-        const textLetterH2 = "To my friend!";
+        const textLetterH2 = "To My Friend!";
         let timoutTextLetter;
 
         function textCharLetter() {
