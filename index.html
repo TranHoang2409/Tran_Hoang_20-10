@@ -647,21 +647,22 @@
 }
 
 
-        .textLetter h2 {
-            text-align: center;
-            font-size: 30px;
-            font-family: 'Dancing Script', cursive;
-        }
+.textLetter h2 {
+    text-align: center;          /* căn trái tiêu đề */
+    font-family: 'Poppins', sans-serif;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
 
-        .textLetter .contentLetter {
-            font-size: 19px;
-            text-align: center;
-            padding: 0px 30px;
-            margin-top: 10px;
-            font-family: 'Dancing Script', cursive;
-            position: initial;
-
-        }
+.textLetter .contentLetter {
+    font-size: 19px;
+    text-align: center;          /* căn trái nội dung */
+    padding: 0px 0px;         /* đẩy nội dung vào đều hai bên */
+    margin-top: 10px;
+    font-family: 'Dancing Script', cursive;
+    position: initial;
+    line-height: 1.6;          /* giúp dễ đọc hơn */
+}
         
         
         .fa-xmark {
@@ -1019,8 +1020,9 @@
                   
                       <!-- Chữ bên phải -->
                       <div class="contentSection">
-                        <h2></h2>
+                        <h2>To My Friend!</h2>
                         <p class="contentLetter">
+                            
                         </p>
                       </div>
                   
@@ -1183,7 +1185,7 @@
         // chữ của thư bạn muốn gửi
         let indexTextContent = 0;
         let textLetterContent = document.querySelector('.contentLetter');
-        const textLetterP = "Hôm nay là ngày 20/10 chúc bạn luôn hạnh phúc và gặp nhiều may mắn trong cuộc sống nhá. Hãy luôn giữ mãi nụ cười trên môi nhá và đừng suy nghĩ nhiều về những thứ không đáng nha";
+        const textLetterP = "Hôm nay là ngày 20/10 chúc bạn luôn hạnh phúc và gặp nhiều may mắn trong cuộc sống nhá. Hãy luôn giữ mãi nụ cười trên môi và đừng suy nghĩ nhiều về những thứ không đáng nha.";
         let timoutTextLetterContent;
         function textCharLetterContent() {
             if (indexTextContent < textLetterP.length) {
